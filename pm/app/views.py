@@ -2,12 +2,16 @@ from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from app.models import Passmanager 
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 def home(request):
-    obj=Passmanager.objects.filter(user=request.user)
-    return render(request,'home.html',{'obj':obj})
+    if request.user.is_authenticated:
+        obj=Passmanager.objects.filter(user=request.user)
+        return render(request,'home.html',{'obj':obj})
+    else:
+        return redirect('login')
 
 
 
@@ -40,8 +44,8 @@ def signout(request):
     return redirect('login')
 
 
-
-def add(request,id):
+@login_required()
+def add(request):
     if request.method=='POST':
         username=request.POST['username']
         password=request.POST['password']
@@ -57,7 +61,7 @@ def add(request,id):
 
 
 
-def delete(request,id):
+def mdelete(request,id):
     obj=Passmanager.objects.get(pk=id)
     obj.delete()
     return redirect('home')
@@ -66,23 +70,14 @@ def delete(request,id):
 def update(request,id):
     obj=Passmanager.objects.get(pk=id)
     if request.method=='POST':
-        obj.delete()
         username=request.POST['username']
         password=request.POST['password']
         site=request.POST['site']
-        pm=Passmanager(username=username,password=password,site=site,user=request.user)
-        pm.save()
+        obj.username=username
+        obj.password=password
+        obj.site=site
+        obj.save()
         return redirect('home')
         
     return render(request,'update.html',{'obj':obj})
         
-
-
-
-
-    
-    
-        
-
-    
-

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='col'>
+<form  method="POST" >
+    {% csrf_token %}
+Site:<input type="text" name="site" value={{obj.site}}/>
+Username:<input type="text" name="username" value={{obj.username}}/>
+Password:<input type="text" name="password" value={{obj.password}}/>
+<input class="btn btn-success" type="submit" >
+</form>
+</div>
+
+{% endblock %}

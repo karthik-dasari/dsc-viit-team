@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+  
+      <div class="col-lg-4 mx-auto shadow p-0">
+        <div class="alert alert-info">
+          <a href="/add/">Add New</a>
+          <a href="/logout/">Logout</a>
+        </div>
+      </div>
+        
+      
+
+
+
+      <div class="col">
+        <div class="border">
+
+          {% if obj|length == 0 %}
+
+          <div class="p-4">
+            <br>
+            <br>
+            <div class="alert alert-info text-center">
+              <p class="" style="font-size: 30px;">list is empty</p>
+            </div>
+            <br>
+            <br>
+          </div>
+
+          {%else%}
+          <div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Site</th>
+                  <th>Username</th>
+                  <th>Password</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                {% for t in obj %}
+                <tr>
+                  <td>{{forloop.counter}}</td>
+                  <td>{{t.site}}</td>
+                  <td>{{t.username}}</td>
+                  <td>{{t.password}}</td>
+
+                  <td>
+                    <a href="/delete/{{t.id}}" title="Delete" class="">🗑️</a> 
+                    <a href="/update/{{t.id}}" title="Update" class="">Update</a> 
+
+                  </td>
+                </tr>
+                {%endfor%}
+
+
+              </tbody>
+            </table>
+          </div>
+          {%endif%}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
