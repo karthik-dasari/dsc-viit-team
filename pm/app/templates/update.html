@@ -1,13 +1,30 @@
+<html>
+    <!-- bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
 {% extends 'base.html' %}
 {% block content %}
-<div class='col'>
+<div ><h1>UPDATE PASSWORD</h1>
+<div class="containter pt-4" >
+  
 <form  method="POST" >
     {% csrf_token %}
-Site:<input type="text" name="site" value={{obj.site}}>
-Username:<input type="text" name="username"  value={{obj.username}} > 
-Password:<input type="text" name="password" value={{obj.password}} >
-<input class="btn btn-success" type="submit" >
-</form>
-</div>
+          <div class="col-lg-5">
+SITE:
+<input type="text" name="site" value={{obj.site}}/><br>
+USERNAME:
+<input type="text" name="username" value={{obj.username}}/><br>
+PASSWORD:
+<input type="password" name="password" value={{obj.password}}/><br>
+<input class="btn btn-success" value="update" type="submit" >
+          </div></form>
+</div></div>
 
 {% endblock %}
+</html>
