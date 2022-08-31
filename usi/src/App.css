@@ -1,0 +1,115 @@
+* {
+  margin:0;
+  padding:0;
+  -webkit-tap-highlight-color:transparent;
+  font-family:sans serif;
+}
+.hero{
+ height:100%;
+ width:100%; background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("https://www.dropbox.com/s/6zsw572l1pix6yu/images%20%2820%29.jpeg?raw=1");
+ background-position:center ;
+  background-size:fill;
+  position:absolute;
+}
+.form-box{
+  position:relative;
+  width:300px;
+  height:450px;
+  margin:6% auto;
+  background:#fff;
+  padding:5px;
+  overflow:hidden;
+}
+.button-box{
+  position:relative;
+  margin:35px auto;
+  width:220px;
+  box-shadow:0px 0px 15px 5px #ffa50025;
+  border-radius:30px;
+}
+.toggle-btn{
+  background:transparent;
+  padding:10px 30px;
+  position:relative;
+  border:0;
+  outline:none;
+  cursor:pointer;
+  color:black;
+}
+#toggle-btn2{
+  color:#d9d9d9;
+}
+
+#btn{
+   top:0;
+   left:0;
+  position:absolute;
+  width:110px;
+  height:100%;
+  background:linear-gradient(to right, #ff8c00,#ff6700,#ff5800);
+  border-radius:30px;
+  transition:.5s;
+  
+}
+
+.social{
+  margin:30px auto ;
+  text-align:center;
+}
+.social i{
+  background:linear-gradient(to right, #ff8c00,#ff6700,#ff5800);
+  width:30px;
+  padding:7px 0px;
+  margin:0 10px;
+  border-radius:50%;
+  cursor:pointer;
+  box-shadow:0px 0px 20px 0 #ffa50040;
+}
+.input-group{
+  top:180px;
+  position:absolute;
+  width:190px;
+  transition:.5s;
+}
+.input-label{
+  width:100%;
+  padding:10px 0px;
+  margin:5px 0;
+  border-left:0;
+  border-right:0;
+  border-bottom:1px solid #ff9f00;
+  border-top:0;
+  outline:none;
+  background:transparent;
+}
+input:focus{
+border-color:red; 
+outline:none;
+}
+.submit-btn{
+  width:85%;
+  margin:auto ;
+  padding:10px 35px;
+  display:block;
+  cursor:pointer;
+  background:linear-gradient(to right, #ff8c00,#ff6700,#ff5800);
+  border:none;
+  border-radius:30px;
+  outline:none;
+}
+.check-box{
+margin:30px 10px 30px 0;  
+}
+span{
+font-size:16px;  
+color:#777;
+bottom:62px;
+position:absolute;
+}
+#login{
+  left:50px;
+}
+#register{
+  left:450px;
+}
+
