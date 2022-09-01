@@ -19,8 +19,9 @@ function App()
       <img src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2020/03/Password-Manager.jpg"  class="container" alt="./imag-pass.webq"/>
         
       </p> 
+    <div id="footer" name="footer">
        <footer><h1 align='center'>IN THIS WEBSITE YOU CAN SAVE YOUR PASSWORDS OF WEBSITE</h1></footer>
-       <p class="text-center">© This site belongs to GDSC VIIT 2022 CLUB</p>
+       <p class="text-center">© This site belongs to GDSC VIIT 2022 CLUB</p></div>
      
     </div>
   )
