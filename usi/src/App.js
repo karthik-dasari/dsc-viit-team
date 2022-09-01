@@ -16,10 +16,10 @@ function App()
       </ul></div> 
       
      <p>
-      <img src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2020/03/Password-Manager.jpg"  class="mx-auto d-block" alt="./imag-pass.webq"/>
+      <img src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2020/03/Password-Manager.jpg"  class="container" alt="./imag-pass.webq"/>
         
       </p> 
-       <footer><h1 align='center'>IN THIS WEBSITE YOU CAN SAVE ANY NUMBER OF PASSWORDS</h1></footer>
+       <footer><h1 align='center'>IN THIS WEBSITE YOU CAN SAVE YOUR PASSWORDS OF WEBSITE</h1></footer>
        <p class="text-center">© This site belongs to GDSC VIIT 2022 CLUB</p>
      
     </div>
