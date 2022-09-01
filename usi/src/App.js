@@ -4,8 +4,8 @@ function App()
 {
   return (
     <div class="topnav1">
-      
-  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"></meta></meta>  
       <h1 align="center">WELCOME TO PASSWORD MANAGER</h1>
       <div class="topnav"><ul>
      <a class="topnav" href="./">HOME</a>
